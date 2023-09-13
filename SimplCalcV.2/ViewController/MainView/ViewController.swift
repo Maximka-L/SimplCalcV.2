@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     //MARK: ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-        service = CalcService(displayYiew: self)
+        service = CalcService(displayView: self)
         view.backgroundColor = .systemRed
        
         configureAppearance()
@@ -34,7 +34,31 @@ class ViewController: UIViewController {
         }
     }
     @objc func buttonPressed(_ sender: UIButton){
-        print(sender)
+        switch sender.tag {
+                case 0...9:
+                    service?.numberAction(number: sender.tag)
+                case 10:
+                    service?.dot()
+                case 11:
+                    service?.makeResult()
+                case 12:
+                    service?.addition()
+                case 13:
+                    service?.substraction()
+                case 14:
+                    service?.multiplication()
+                case 15:
+                    service?.acAction()
+                case 16:
+                    service?.changeSign()
+                case 17:
+                    service?.percent()
+                case 18:
+                    service?.division()
+                default:
+                    break
+                }
+    
     }
 
 }

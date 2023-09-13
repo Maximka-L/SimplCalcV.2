@@ -1,10 +1,8 @@
-import Foundation
 
 enum Operations {
-    case none
+    case noAction
     case addition
-    case subtraction
-    case multiplication
+    case substraction
     case division
+    case multiplication
 }
-
