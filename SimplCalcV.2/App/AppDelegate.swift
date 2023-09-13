@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  SimplCalcV.2
-//
-//  Created by test on 13.09.2023.
-//
-
 import UIKit
 
 @main
